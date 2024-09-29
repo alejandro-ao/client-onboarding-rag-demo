@@ -1,5 +1,7 @@
 # Exercise: Build an Onboarding Assistant for the Umbrella Corporation
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Umbrella_Corporation_logo.svg" alt="Umbrella Corporation Logo" width="100"/>
+
 ### Overview
 
 In this exercise, you will build an **onboarding assistant** for the **Umbrella Corporation**, a fictional company from the *Resident Evil* franchise. The assistant will guide new employees through company policies, answer questions about internal regulations, and provide personalized responses based on the employee's information. You will use **Streamlit** to build a graphical user interface and **LangChain** to integrate **Retrieval Augmented Generation (RAG)**. The assistant will augment its responses using a vector store filled with information extracted from a provided PDF of Umbrella Corporation's internal regulations.
