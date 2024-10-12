@@ -26,11 +26,10 @@ class AssistantGUI:
         if user_input and user_input != "":
             st.chat_message("human").markdown(user_input)
 
-            response = self.get_response(user_input)
-            # response_generator = self.get_response(user_input)
+            response_generator = self.get_response(user_input)
 
-            # with st.chat_message("ai"):
-            #     response = st.write_stream(response_generator)
+            with st.chat_message("ai"):
+                response = st.write_stream(response_generator)
 
             self.messages.append({"role": "user", "content": user_input})
             self.messages.append({"role": "ai", "content": response})

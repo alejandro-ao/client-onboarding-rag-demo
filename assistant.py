@@ -21,7 +21,7 @@ class Assistant:
         self.chain = self._get_conversation_chain()
 
     def get_response(self, user_input):
-        return self.chain.invoke(user_input)
+        return self.chain.stream(user_input)
 
     def _get_conversation_chain(self):
         prompt = ChatPromptTemplate(

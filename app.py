@@ -30,7 +30,7 @@ if __name__ == "__main__":
             loader = PyPDFLoader(pdf_path)
             docs = loader.load()
             text_splitter = RecursiveCharacterTextSplitter(
-                chunk_size=4000, chunk_overlap=200
+                chunk_size=2000, chunk_overlap=200
             )
             splits = text_splitter.split_documents(docs)
 
@@ -50,14 +50,14 @@ if __name__ == "__main__":
             return None
 
     customer_data = get_user_data()
-    vector_store = init_vector_store("data/umbrella_onboarding.pdf")
+    vector_store = init_vector_store("data/umbrella_corp_policies.pdf")
 
     if "customer" not in st.session_state:
         st.session_state.customer = customer_data
     if "messages" not in st.session_state:
         st.session_state.messages = [{"role": "ai", "content": WELCOME_MESSAGE}]
 
-    llm = ChatGroq()
+    llm = ChatGroq(model="llama-3.1-8b-instant")
 
     assistant = Assistant(
         system_prompt=SYSTEM_PROMPT,
