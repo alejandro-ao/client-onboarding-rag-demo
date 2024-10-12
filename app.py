@@ -1,5 +1,4 @@
 from data.employees import generate_employee_data
-import json
 from dotenv import load_dotenv
 import streamlit as st
 from langchain_community.document_loaders import PyPDFLoader
@@ -10,6 +9,7 @@ import logging
 from assistant import Assistant
 from prompts import SYSTEM_PROMPT, WELCOME_MESSAGE
 from langchain_groq import ChatGroq
+from gui import AssistantGUI
 
 
 if __name__ == "__main__":
@@ -66,3 +66,6 @@ if __name__ == "__main__":
         employee_information=st.session_state.customer,
         vector_store=vector_store,
     )
+    
+    gui = AssistantGUI(assistant)
+    gui.render()
