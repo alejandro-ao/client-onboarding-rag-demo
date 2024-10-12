@@ -1,7 +1,9 @@
-langchain
-langchain-groq
-langchain-openai
-langchain-chroma
-faker
-python-dotenv
-streamlit
+langchain==0.3.1
+langchain-community==0.3.1
+langchain-chroma==0.1.4
+langchain-groq==0.2.0
+langchain-openai==0.2.1
+streamlit==1.38.0
+pypdf==5.0.1
+python-dotenv==1.0.1
+Faker==30.0.0
