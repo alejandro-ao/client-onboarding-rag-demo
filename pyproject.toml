@@ -1,0 +1,17 @@
+[project]
+name = "2025-09-01-onboarding-chatbot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "faker>=37.6.0",
+    "langchain>=0.3.27",
+    "langchain-chroma>=0.2.5",
+    "langchain-community>=0.3.29",
+    "langchain-groq>=0.3.7",
+    "langchain-openai>=0.3.32",
+    "pypdf>=6.0.0",
+    "python-dotenv>=1.1.1",
+    "streamlit>=1.49.1",
+]
